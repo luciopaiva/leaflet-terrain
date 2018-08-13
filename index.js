@@ -26,6 +26,9 @@ function pickColor(value) {
 }
 
 function createTile(coords) {
+    // ToDo memoize canvases using LRU cache to improve loading speed
+    // ToDo find out if asynchronous tile loading is of any help here (see https://leafletjs.com/reference-1.3.2.html#gridlayer)
+
     const canvas = document.createElement('canvas');
 
     const tileSize = this.getTileSize();
